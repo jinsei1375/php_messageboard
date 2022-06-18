@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <?php phpinfo(); ?>
+  <?php echo Date('Y.m.d'); ?>
+
 </body>
 </html>
