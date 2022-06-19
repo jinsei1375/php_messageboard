@@ -8,6 +8,6 @@
 </head>
 <body>
   <?php echo Date('Y.m.d'); ?>
-
+  <p>変更テスト</p>
 </body>
 </html>
