@@ -1,0 +1,35 @@
+{
+  "name": "blog-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "run-s prod:sass prod:css",
+    "prod:sass": "sass ./html/assets/css/sass/style.sass:./html/assets/css/style.css --embed-source-map",
+    "prod:css": "postcss ./html/assets/css/style.css --replace",
+    "prod:js": "prettier-eslint --write './assets/js/**/*.js'",
+    "prod:php": "prettier ./*.php ./**/*.php --write",
+    "dev": "run-p browsersync dev:sass",
+    "browsersync": "browser-sync start --proxy 'localhost' --files='**/*.php, **/*.css, **/*.js'",
+    "dev:sass": "sass ./html/assets/css/sass/style.sass:./html/assets/css/style.css --embed-source-map -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.9",
+    "eslint-config-prettier": "^8.5.0",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
+    "prettier": "2.6.2",
+    "sass": "^1.52.1",
+    "watch": "^1.0.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
